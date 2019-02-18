@@ -5,7 +5,9 @@
 #include <netinet/in.h> 
 #include <string.h> 
 #define PORT 8080 
-
+/*
+setting up the client 
+*/
 int main(int argc, char const *argv[]) 
 { 
 	struct sockaddr_in address; 
@@ -40,13 +42,18 @@ int main(int argc, char const *argv[])
  
 
 	while(1){
-		char name[1024];
+		char msg[1024];
 	
 	//("Hello message sent\n"); 
-	fgets(name,1024,stdin);
-	send(sock , name , strlen(name) , 0 ); 
+	fgets(msg,1024,stdin);
+	send(sock , msg , strlen(msg) , 0 ); 
+	fseek(stdin,0,SEEK_END);
 	valread = read( sock , buffer, 1024); 
+	//
+	printf("Server:");
 	printf("%s\n",buffer ); 
+	memset(&msg,'\0',sizeof(msg));
+	memset(&buffer,'\0',sizeof(buffer));
 	}
 	return 0; 
 }
