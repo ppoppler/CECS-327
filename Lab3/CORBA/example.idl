@@ -1,0 +1,6 @@
+interface ExampleInterface
+{
+	string send_message(in string message);
+	
+	void question_answer(in string question, in string answer);
+};
