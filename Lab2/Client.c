@@ -3,7 +3,7 @@
  * Philip Poppler
  * This program demonstrates setting up a client and server that send and receieve messages with each other.
  * The objective is to learn socket programming in C.
- * */
+ * */ 
 #include <stdio.h> 
 #include <sys/socket.h> 
 #include <stdlib.h> 
