@@ -2,7 +2,7 @@
  @author Rayhaan Shaikh
  @author Philip Poppler
  CECS 327
- Assignment 1
+ Assignment 1 
  Purpose: To demonstrate our knowledge of threads, pointers, and C++.
  */
 #include <iostream>
